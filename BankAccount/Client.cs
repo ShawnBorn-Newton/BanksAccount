@@ -20,6 +20,16 @@ namespace BankAccount
         {
             //defalt
         }
-        //need method
+        
+        public Client(string hairColor, string eyeColor, string name)
+        {
+            this.name = name;
+            this.hairColor = hairColor;
+            this.eyeColor = eyeColor;
+        }
+        public virtual void GetClientInfo()
+        {
+            Console.WriteLine("Name: " + name + "\nHair Color: " + hairColor + "\nEye Color: " + eyeColor);
+        }
     }
 }
