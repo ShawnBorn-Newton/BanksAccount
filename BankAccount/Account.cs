@@ -14,7 +14,7 @@ namespace BankAccount
         //properties
         public int AccountNumber { get; }
         public double AccountBalance { get; }
-        
+        //constuctors
         public Account()
         {
             //defalt
@@ -24,7 +24,7 @@ namespace BankAccount
             this.accountNumber = accountNumber;
             this.accountBalance = accountBalance;
         }
-
+        //methods
         public abstract double DisplayBalance();
        
         public virtual double MakeDeposit(double accountBalace, double deposit)

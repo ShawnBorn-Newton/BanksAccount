@@ -15,7 +15,7 @@ namespace BankAccount
         public string HairColor { get; }
         public string EyeColor { get; }
         public string Nmae { get; }
-
+        //constuctors
         public Client()
         {
             //defalt
@@ -27,6 +27,7 @@ namespace BankAccount
             this.hairColor = hairColor;
             this.eyeColor = eyeColor;
         }
+        //methods
         public virtual void GetClientInfo()
         {
             Console.WriteLine("Name: " + name + "\nHair Color: " + hairColor + "\nEye Color: " + eyeColor);

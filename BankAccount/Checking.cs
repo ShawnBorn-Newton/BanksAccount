@@ -14,7 +14,7 @@ namespace BankAccount
         //properties
         public int CheckingNumber { get; }
         public double CheckingBalance { get; set; }
-
+        //constuctors
         public Checking()
         {
             //default
@@ -25,7 +25,7 @@ namespace BankAccount
             this.checkingBalance = checkingBalance;
             this.checkingNumber = checkingNumber;
         }
-
+        //methods
         public virtual void GetChecking()
         {
             Console.WriteLine("Your checking balace is: " + checkingBalance);
@@ -43,7 +43,7 @@ namespace BankAccount
             checkingBalance = checkingBalance - withdraw;
             return checkingBalance;
         }
-
+        //needed to make abstact Accounts works, someing is wrong here
         public override double DisplayBalance()
         {
             throw new NotImplementedException();

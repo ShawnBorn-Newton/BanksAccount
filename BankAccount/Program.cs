@@ -82,14 +82,14 @@ namespace BankAccount
                         string withdrawSelect = Console.ReadLine();
                         if (withdrawSelect == "a")
                         {
-                            Console.WriteLine("How much would you like to deposit?");
+                            Console.WriteLine("How much would you like to withdraw?");
                             double withdraw = double.Parse(Console.ReadLine());
                             makeItRain.MakeWithdraw(checkingBalance, withdraw);
                             makeItRain.GetChecking();
                         }
                         if (withdrawSelect == "b")
                         {
-                            Console.WriteLine("How much would you like to deposit?");
+                            Console.WriteLine("How much would you like to withdraw?");
                             double withdraw = double.Parse(Console.ReadLine());
                             saveStare.MakeWithdraw(checkingBalance, withdraw);
                             saveStare.GetSaveings();

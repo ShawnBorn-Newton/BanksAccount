@@ -14,7 +14,7 @@ namespace BankAccount
         //properties
         public int SaveingsNumber { get; }
         public double SaveingstBalance { get; }
-
+        //constuctors
         public Saveings()
         {
             //default
@@ -25,7 +25,7 @@ namespace BankAccount
             this.saveingsBalance = saveingsBalance;
             this.saveingsNumber = saveingsNumber; 
         }
-
+        //methods
         public virtual void GetSaveings()
         {
             Console.WriteLine("Your saveing balace is: " + saveingsBalance);
@@ -38,10 +38,18 @@ namespace BankAccount
         }
         public virtual double MakeWithdraw(double saveingsBalancee, double withdraw)
         {
-            saveingsBalance = saveingsBalance - withdraw;
+            if (saveingsBalance - withdraw < 25)
+            {
+                Console.WriteLine("You broke, can not withdraw bellow $25.");
+            }
+            else
+            {
+                saveingsBalance = saveingsBalance - withdraw;
+            }
             return saveingsBalance;
         }
 
+        //needed to make abstact Accounts works, someing is wrong here
         public override double DisplayBalance()
         {
             throw new NotImplementedException();
